@@ -14,6 +14,13 @@ const pacientes = [
 ];
 
 // 2. Funcoes
+
+/**
+ * Verifica a posicao de um dado paciente na fila de pacientes
+ * @param {any} pacientes um array de pacientes
+ * @param {any} paciente a string com o nome de determinado paciente
+ * @returns {any} a posicao na fila do paciente dado
+ */
 const verificarPosicaoPacienteFila = (pacientes, paciente) => {
     return pacientes.indexOf(paciente) + 1;
 }

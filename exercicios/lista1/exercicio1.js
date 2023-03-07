@@ -14,6 +14,12 @@ const alunos = [
 ];
 
 // 2. Funcoes
+
+/**
+ * Calcula a quantidade de alunos aprovados de uma turma
+ * @param {any} alunos array com os alunos
+ * @returns {any} a quantidade de aprovados
+ */
 const quantidadeAprovados = (alunos) => {
     const total = alunos.reduce((count, aluno) => {
         return aluno.nota >= 70 ? (count + 1) : count;

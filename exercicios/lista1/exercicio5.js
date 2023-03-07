@@ -14,6 +14,13 @@ const usuarios = [
 ];
 
 // 2. Funcoes
+
+/**
+ * Verifica o status de autenticao de um dado usuario
+ * @param {any} usuarios array de usuarios
+ * @param {any} nome string com o nome desejado para saber o status
+ * @returns {any} o objeto do usuario
+ */
 const verificarUsuarioAutenticado = (usuarios, nome) => {
     return usuarios.find(usuario => usuario.nome === nome);
 }

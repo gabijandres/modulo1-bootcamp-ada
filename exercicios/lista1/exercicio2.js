@@ -21,6 +21,12 @@ const usuarios = [
 ];
 
 // 2. Funcoes
+
+/**
+ * Concatena o nome completo de usuarios
+ * @param {any} usuarios um array de usuarios
+ * @returns {any} um array de usuarios com o nome completo concatenado
+ */
 const montarNomesCompletos = (usuarios) => {
     const usuariosEmNovoFormato = usuarios.map(usuario => {
         return { 

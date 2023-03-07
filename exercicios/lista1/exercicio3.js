@@ -13,6 +13,12 @@ const feedbacks = [
 ];
 
 // 2. Funcoes
+
+/**
+ * Remove feedbacks duplicados da lista dada
+ * @param {any} feedbacks um array de feedbacks
+ * @returns {any} um conjunto (sem repeticoes) com os feedbacks
+ */
 const removerFeedbacksDuplicados = (feedbacks) => {
     return [...new Set(feedbacks)];
 }
