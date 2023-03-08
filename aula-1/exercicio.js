@@ -12,15 +12,14 @@ var str8 = '';
 
 //Criar a funcao getCharFrequencies. Essa funcao deve receber uma string e devolver
 //a frequencia de cada caracter da string.
-function getCharFrequencies(s) {
+function getCharFrequencies(s){
 
 }
 
 
 //Criar a funcao contem onde serao passadas duas strings (s1 e s2).
-//contem? devera verificar se os caracteres (com quantidade) de s1 estao contidos
+//contem devera verificar se os caracteres (com quantidade) de s1 estao contidos
 //em s2. Retorna true ou false.
-
 function contem(s1, s2) {
 }
 

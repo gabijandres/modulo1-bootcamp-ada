@@ -62,7 +62,6 @@ function contem(s1, s2){
         }
     return true;
     }
-
 }
 
 console.log(contem(str1, str2)); // true
