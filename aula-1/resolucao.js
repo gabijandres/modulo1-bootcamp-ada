@@ -13,13 +13,13 @@ var str6 = 'katas';
 var str7 = '';
 var str8 = 'a';
 
-function getCharFrequencies(s){
+function getCharFrequencies(s) {
     var mapa = new Map();
-    for(c of s){
-        if(mapa.get(c)){
-            mapa.set(c, mapa.get(c)+1);
+    for (c of s) {
+        if (mapa.get(c)) {
+            mapa.set(c, mapa.get(c) + 1);
         }
-        else{
+        else {
             mapa.set(c, 1);
         }
     }
@@ -32,7 +32,7 @@ function getCharFrequencies(s){
 // getCharFrequencies com reduce.
 function getCharFrequencies2(s) {
     return [...s].reduce((acc, c) => {
-        if(acc.get(c)) {
+        if (acc.get(c)) {
             return acc.set(c, acc.get(c) + 1);
         } else {
             return acc.set(c, 1);
@@ -46,22 +46,21 @@ function getCharFrequencies2(s) {
 //contem? devera verificar se os caracteres (com quantidade) de s1 estao contidos
 //em s2. Retorna true ou false.
 
-function contem(s1, s2){
-    let objFreqS1 = getCharFrequencies(s1);
-    let objFreqS2 = getCharFrequencies(s2);
-    if(objFreqS2.size === 0 ||
-       objFreqS1.size === 0 ||
-       objFreqS1.size > objFreqS2.size){
+function contem(s1, s2) {
+    if (s1.length > s2.length ||
+        s1.length <= 0) {
         return false
     }
-    else{
-        for(k of objFreqS1.keys()){
-            if(objFreqS1.get(k) > objFreqS2.get(k) ?? 0){
-                return false;
-            }
+    const objFreqS1 = getCharFrequencies(s1);
+    const objFreqS2 = getCharFrequencies(s2);
+
+    for (k of objFreqS1.keys()) {
+        const letraS2 = objFreqS2.get(k) ?? 0;
+        if (objFreqS1.get(k) > letraS2) {
+            return false;
         }
-    return true;
     }
+    return true;
 }
 
 console.log(contem(str1, str2)); // true

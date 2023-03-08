@@ -16,4 +16,6 @@ const nomesUsuarios = [
     "Laura Heloisa",
     "Eliane Louise",
   ];
+
+  console.log(remover((user) => "Luiz Julio" === user, nomesUsuarios));
   
