@@ -132,4 +132,3 @@ const changeStreet3 = (users, userName, newStreet) =>
             { ...user, address: { ...user.address, street1: newStreet } });
 
 // console.log(changeStreet3(users, "user2", "lalalala"));
-
