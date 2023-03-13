@@ -32,3 +32,11 @@ console.log(contem(str3, str4)); // true
 console.log(contem(str5, str6)); // false
 console.log(contem(str7, str8)); // false
 console.log(contem(str8, str7)); // false
+
+
+
+
+
+// Exercicio extra
+// Escrever a funcao compose para que possamos passar um numero qualquer de funcoes
+
