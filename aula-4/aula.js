@@ -1,29 +1,39 @@
 // Mais funcoes de ordem superior
 
-const vetor = ["f", "b", "a", "d", "c", "e"];
+const vetor = ["f", "b", "a", "d", "c", "e", "d"];
 
-
+let v = [];
 // vetor.forEach((elemento) => {
 //     console.log(elemento);
+//     v.push(elemento);
 // });
 
+// console.log(v);
 
-const idxElemento = vetor.findIndex((el) => el === "p");
+
+
+// const idxElemento = vetor.findIndex((el) => el === "z");
 
 // console.log(idxElemento);
 
-// console.log([1,5,2,3].sort());
+// console.log([1,5,2,3,10].sort());
 
-const sorted = vetor.sort();
+
+// const sorted = vetor.sort();
 // console.log(sorted);
 
 const sortNum = [10, 2, 57, 7, 11].sort((a, b) => {
-    if (a > b) return 1;
-    if (a < b) return -1;
+    if (a > b) return -1;
+    if (a < b) return 1;
     if (a === b) return 0;
 });
 
-// console.log(sortNum);
+const sortNum2 = [10, 2, 57, 7, 11, 10].sort((a, b) => a-b);
+
+// console.log(sortNum2);
+
+// Mais metodos para percorrer arrays
+//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 const pessoas = [
     {
@@ -35,12 +45,12 @@ const pessoas = [
         id: 6
     },
     {
-        nome: null,
-        id: 6
-    },
-    {
         nome: "Augusto César",
         id: 30
+    },
+    {
+        nome: null,
+        id: 22
     },
     {
         nome: "augusto César",
@@ -56,8 +66,8 @@ const pessoas = [
     },
 ];
 
-const pessoasClassificadas = pessoas.sort((pessoa1, pessoa2) =>
-    pessoa1.id > pessoa2.id ? 1 : -1);
+// const pessoasClassificadas = pessoas.sort((pessoa1, pessoa2) =>
+//     pessoa1.id > pessoa2.id ? -1 : 1);
 // console.log(pessoasClassificadas);
 
 
@@ -66,32 +76,42 @@ const pessoasClassificadas = pessoas.sort((pessoa1, pessoa2) =>
 
 function classificaPeloNome(pessoas) {
     return pessoas.sort((pessoa1, pessoa2) =>
-    pessoa1.nome.toUpperCase() > pessoa2.nome.toUpperCase() ? 1 : -1);
+    pessoa1.nome?.toLowerCase() > pessoa2.nome?.toLowerCase() ? 1 : -1);
+    
 }
 
-
-// console.log(classificaPeloNome());
 
 
 // Composicao de funcoes
 
-const multiplica = (x, y) => y * x;
+
 
 const metade = (x) => x / 2;
 
-// console.log(metade(dobro(dobro(2))));
+
+
+const concat = (str1, str2) => {
+    return (str1 ?? "").concat(str2 ?? "")
+};
+
+const trim = (str) => str.trim();
+
+// console.log(trim(concat("   234", "ascf    ")));
+
+
 
 function compose(fn1, fn2) {
-    return function (...args) {
-        return fn2(fn1(...args));
+    return function (args) {
+        return fn2(fn1(args));
     }
 }
 
-const quadruplo = compose(multiplica, metade);
-console.log(quadruplo(2, 3));
+const dobro = (x) => 2 * x;
+// console.log(dobra(dobra(2)));
+const quadruplo = compose(dobro, dobro);
+
+console.log(quadruplo(2));
+
+// console.log(quadruplo(2));
 
 
-
-const lowerCase = (str) => str ? str.toLowerCase() : '';
-
-// console.log(lowerCase("AAAAAAAAAA"));
