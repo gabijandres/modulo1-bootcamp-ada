@@ -29,19 +29,6 @@ function getCharFrequencies(s) {
 
 // console.log(getCharFrequencies("asdffff"));
 
-// getCharFrequencies com reduce.
-function getCharFrequencies2(s) {
-    return [...s].reduce((acc, c) => {
-        if (acc.get(c)) {
-            return acc.set(c, acc.get(c) + 1);
-        } else {
-            return acc.set(c, 1);
-        }
-    }, new Map());
-}
-
-// console.log(getCharFrequencies2("asdfff"));
-
 //Criar a funcao contem onde serao passadas duas strings (s1 e s2).
 //contem? devera verificar se os caracteres (com quantidade) de s1 estao contidos
 //em s2. Retorna true ou false.

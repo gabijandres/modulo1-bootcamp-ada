@@ -33,7 +33,6 @@ const user4 = {
 
 
 
-
 // Implementar expressao regular para checagem do campo de telefone.
 // deve seguir o formato (NN)NNNNN-NNNN (espaco opcional entre o ddd e o numero,
 // o numero e a primeira parte do telefone pode ter 4 ou 5 digitos e o hifen tambem opcional.)
