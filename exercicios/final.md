@@ -4,8 +4,8 @@
 
 Nosso sistema deve receber a lista de clientes a seguir:
 
-```json
-const clientes = [
+```javascript
+[
     {
         id: 1,
         nome: "Luiz Julio",
@@ -115,7 +115,7 @@ const clientes = [
 O sistema devera conter 3 funcionalidades:
  - Trazer a media de idade dos clientes;
  - Retornar um objeto (ou mapa) de compras com o seguinte formato:
-   ```json
+   ```javascript
       {
         <id_do_cliente>: [{item: <nome_do_item>,
                            valor: <valor_do_item>}]
