@@ -181,7 +181,7 @@ const validaCliente = (cliente) => {
     validaIdade(idade);
     validaTelefone(telefone);
   } catch (erro) {
-    const novoErro = { name: erro.name + " no usuario " + id, message: erro.message, ...erro };
+    const novoErro = { name: erro.name + " no cliente " + id, message: erro.message, ...erro };
     throw novoErro;
   }
 }
